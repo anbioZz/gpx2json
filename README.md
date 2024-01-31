@@ -74,14 +74,48 @@ Choose your preferred method to explore the flat Earth with gxp2json:
 1. **Pull the Docker Image:**
 
     ```bash
-    docker pull anbioZz/gxp2json:0.0.2-slim
+    docker pull anbiozz/gxp2json:latest
     ```
 2. **Run the Docker Container:**
 
     ```bash
-    docker run -v $(pwd):/app anbioZz/gxp2json:0.0.2-slim --gpx /app/your_gpx_file.gpx --json /app/output_json_file.json
+    docker run -v $(pwd):/app anbiozz/gxp2json:latest --gpx /app/your_gpx_file.gpx --json /app/output_json_file.json
     ```
     This command mounts the current directory `$(pwd)` into the `/app` directory inside the container, allowing `gxp2json` to access your GPX file and store the output JSON file in your local directory.
+   
+3. **View the Program's Help Message:**
+
+    To view the available options and command-line arguments, use:
+
+    - For Docker version:
+
+    ```bash
+    docker run anbiozz/gxp2json:latest --help                                                                                                                                                                                                     
+    usage: main.py [-h] [--version] --gpx GPX --json JSON
+    
+             ██████╗ ██╗  ██╗██████╗ ██████╗      ██╗███████╗ ██████╗ ███╗   ██╗
+            ██╔════╝ ╚██╗██╔╝██╔══██╗╚════██╗     ██║██╔════╝██╔═══██╗████╗  ██║
+            ██║  ███╗ ╚███╔╝ ██████╔╝ █████╔╝     ██║███████╗██║   ██║██╔██╗ ██║
+            ██║   ██║ ██╔██╗ ██╔═══╝ ██╔═══╝ ██   ██║╚════██║██║   ██║██║╚██╗██║
+            ╚██████╔╝██╔╝ ██╗██║     ███████╗╚█████╔╝███████║╚██████╔╝██║ ╚████║
+             ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝ ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
+                                     Project LISAPED
+    
+    Converter from GPX to JSON
+    
+    options:
+      -h, --help   show this help message and exit
+      --version    show program version and exit
+      --gpx GPX    specify the path to the GPX file
+      --json JSON  specify the path to the JSON file
+
+    ```
+    - For Traditional Python version:
+
+        ```bash
+        python main.py --help
+        ...
+        ```
 
 ## Contribution
 
