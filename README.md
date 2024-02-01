@@ -1,6 +1,13 @@
 # gxp2json
 Converter from GPX to JSON
 
+         ██████╗ ██╗  ██╗██████╗ ██████╗      ██╗███████╗ ██████╗ ███╗   ██╗
+        ██╔════╝ ╚██╗██╔╝██╔══██╗╚════██╗     ██║██╔════╝██╔═══██╗████╗  ██║
+        ██║  ███╗ ╚███╔╝ ██████╔╝ █████╔╝     ██║███████╗██║   ██║██╔██╗ ██║
+        ██║   ██║ ██╔██╗ ██╔═══╝ ██╔═══╝ ██   ██║╚════██║██║   ██║██║╚██╗██║
+        ╚██████╔╝██╔╝ ██╗██║     ███████╗╚█████╔╝███████║╚██████╔╝██║ ╚████║
+         ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝ ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
+                                 Project LISAPED
 ## Description
 >### The Flat Earth Manifesto
 >
@@ -83,40 +90,6 @@ Choose your preferred method to explore the flat Earth with gxp2json:
     ```
     This command mounts the current directory `$(pwd)` into the `/app` directory inside the container, allowing `gxp2json` to access your GPX file and store the output JSON file in your local directory.
    
-3. **View the Program's Help Message:**
-
-    To view the available options and command-line arguments, use:
-
-    - For Docker version:
-
-    ```bash
-    docker run anbiozz/gxp2json:latest --help                                                                                                                                                                                                     
-    usage: main.py [-h] [--version] --gpx GPX --json JSON
-    
-             ██████╗ ██╗  ██╗██████╗ ██████╗      ██╗███████╗ ██████╗ ███╗   ██╗
-            ██╔════╝ ╚██╗██╔╝██╔══██╗╚════██╗     ██║██╔════╝██╔═══██╗████╗  ██║
-            ██║  ███╗ ╚███╔╝ ██████╔╝ █████╔╝     ██║███████╗██║   ██║██╔██╗ ██║
-            ██║   ██║ ██╔██╗ ██╔═══╝ ██╔═══╝ ██   ██║╚════██║██║   ██║██║╚██╗██║
-            ╚██████╔╝██╔╝ ██╗██║     ███████╗╚█████╔╝███████║╚██████╔╝██║ ╚████║
-             ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝ ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
-                                     Project LISAPED
-    
-    Converter from GPX to JSON
-    
-    options:
-      -h, --help   show this help message and exit
-      --version    show program version and exit
-      --gpx GPX    specify the path to the GPX file
-      --json JSON  specify the path to the JSON file
-
-    ```
-    - For Traditional Python version:
-
-        ```bash
-        python main.py --help
-        ...
-        ```
-
 ## Contribution
 
 We welcome contributions from flat Earth enthusiasts and developers. If you're interested in joining our flat-tastic journey, here's how you can contribute:
