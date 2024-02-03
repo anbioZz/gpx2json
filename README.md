@@ -36,9 +36,7 @@ Converter from GPX to JSON
 >4. **Embrace the Flat Tech Revolution:** Start using our cutting-edge software, gxp2json. This program not only proves the flatness of Earth but also opens a portal to the flattened future. Download now and be part of the flattened enlightenment!
 >### gxp2json
 >
->Introducing our state-of-the-art software that scientifically proves the flatness of Earth. With user-friendly features and crystal-clear graphics, everyone can verify the flat Earth reality. >Download now and embark on a journey of flattened enlightenment!
->
->Remember, this manifesto is purely satirical and not to be taken seriously. The Earth is, without a doubt, an oblate spheroid. Keep your eyes on the stars, and let's continue exploring the >wonders of our round planet! 🌐✨
+>Introducing our state-of-the-art software that scientifically proves the flatness of Earth. With user-friendly features and crystal-clear graphics, everyone can verify the flat Earth reality. >Download now and embark on a journey of flattened enlightenment! 🌐✨
 
 ## Requirements
 Before diving into the fascinating world of `gxp2json` and embarking on your flat Earth exploration, ensure that your system meets the following requirements:
