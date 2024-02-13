@@ -63,9 +63,15 @@ def parse_gpx(gpx_file):
         # Loop through each segment in the track
         for segment in track.segments:
             # Loop through each point in the segment
+            unique_points_dict = dict()
             for point in tqdm(segment.points, desc="Getting all points"):
-                points_list.append(geo2decart(point.latitude, point.longitude, point.elevation, points_index))
-                points_index += 1
+                current_point = (point.latitude, point.longitude, point.elevation)
+                if current_point not in unique_points_dict:
+                    # When the point is unique, we add it to the dictionary and the list
+                    unique_points_dict[current_point] = True
+                    points_list.append(
+                        geo2decart(point.latitude, point.longitude, point.elevation, points_index))
+                    points_index += 1
 
     return points_list
 
