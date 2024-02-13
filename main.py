@@ -64,7 +64,7 @@ def parse_gpx(gpx_file):
         for segment in track.segments:
             # Loop through each point in the segment
             unique_points_dict = dict()
-            for point in tqdm(segment.points, desc="Getting all points"):
+            for point in tqdm(segment.points, desc="Getting all points", ncols=80):
                 current_point = (point.latitude, point.longitude, point.elevation)
                 if current_point not in unique_points_dict:
                     # When the point is unique, we add it to the dictionary and the list
@@ -98,7 +98,7 @@ def set_zero_x_y(orig_list):
     zero_y = orig_list[0]['y']
     zero_z = orig_list[0]['z']
 
-    for item in tqdm(orig_list, desc="Flattening"):
+    for item in tqdm(orig_list, desc="Flattening", ncols=80):
         item['x'] = item['x'] - zero_x
         item['y'] = (item['y'] - zero_y) * -1  # Mirror the track. See note below.
         item['z'] = item['z'] - zero_z
