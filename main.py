@@ -122,7 +122,7 @@ if __name__ == '__main__':
         formatter_class=argparse.RawDescriptionHelpFormatter,
         description=f'{logo}\nConverter from GPX to JSON'
     )
-    parser.add_argument("--version", action="version", version="%(prog)s 0.0.2a",
+    parser.add_argument("--version", action="version", version="%(prog)s 0.0.3",
                         help="show program version and exit")
     parser.add_argument("--gpx", required=True, help="specify the path to the GPX file")
     parser.add_argument("--json", required=True, help="specify the path to the JSON file")
