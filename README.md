@@ -1,12 +1,12 @@
-# gxp2json
+# gpx2json
 Converter from GPX to JSON
 
-         ██████╗ ██╗  ██╗██████╗ ██████╗      ██╗███████╗ ██████╗ ███╗   ██╗
-        ██╔════╝ ╚██╗██╔╝██╔══██╗╚════██╗     ██║██╔════╝██╔═══██╗████╗  ██║
-        ██║  ███╗ ╚███╔╝ ██████╔╝ █████╔╝     ██║███████╗██║   ██║██╔██╗ ██║
-        ██║   ██║ ██╔██╗ ██╔═══╝ ██╔═══╝ ██   ██║╚════██║██║   ██║██║╚██╗██║
-        ╚██████╔╝██╔╝ ██╗██║     ███████╗╚█████╔╝███████║╚██████╔╝██║ ╚████║
-         ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝ ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
+          ██████╗ ██████╗ ██╗  ██╗██████╗      ██╗███████╗ ██████╗ ███╗   ██╗
+         ██╔════╝ ██╔══██╗╚██╗██╔╝╚════██╗     ██║██╔════╝██╔═══██╗████╗  ██║
+         ██║  ███╗██████╔╝ ╚███╔╝  █████╔╝     ██║███████╗██║   ██║██╔██╗ ██║
+         ██║   ██║██╔═══╝  ██╔██╗ ██╔═══╝ ██   ██║╚════██║██║   ██║██║╚██╗██║
+         ╚██████╔╝██║     ██╔╝ ██╗███████╗╚█████╔╝███████║╚██████╔╝██║ ╚████║
+          ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚══════╝ ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
                                  Project LISAPED
 ## Description
 >### The Flat Earth Manifesto
@@ -33,31 +33,31 @@ Converter from GPX to JSON
 >
 >3. **Become a Disc-iple:** Spread the word about our flat and fabulous Earth. Join the Flat Earth Society today!
 >
->4. **Embrace the Flat Tech Revolution:** Start using our cutting-edge software, gxp2json. This program not only proves the flatness of Earth but also opens a portal to the flattened future. Download now and be part of the flattened enlightenment!
->### gxp2json
+>4. **Embrace the Flat Tech Revolution:** Start using our cutting-edge software, gpx2json. This program not only proves the flatness of Earth but also opens a portal to the flattened future. Download now and be part of the flattened enlightenment!
+>### gpx2json
 >
 >Introducing our state-of-the-art software that scientifically proves the flatness of Earth. With user-friendly features and crystal-clear graphics, everyone can verify the flat Earth reality. >Download now and embark on a journey of flattened enlightenment! 🌐✨
 
 ## Requirements
-Before diving into the fascinating world of `gxp2json` and embarking on your flat Earth exploration, ensure that your system meets the following requirements:
+Before diving into the fascinating world of `gpx2json` and embarking on your flat Earth exploration, ensure that your system meets the following requirements:
 
-- Python 3.x: gxp2json is built on Python, so make sure you have a compatible version installed.
+- Python 3.x: gpx2json is built on Python, so make sure you have a compatible version installed.
 
 ## Installation and Usage
-Choose your preferred method to explore the flat Earth with gxp2json:
+Choose your preferred method to explore the flat Earth with gpx2json:
 
 ### Option 1: Traditional Python Installation
 
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/anbioZz/gxp2json.git
+    git clone https://github.com/anbioZz/gpx2json.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd gxp2json
+    cd gpx2json
     ```
 
 3. **Install dependencies:**
@@ -66,7 +66,7 @@ Choose your preferred method to explore the flat Earth with gxp2json:
     pip install -r requirements.txt
     ```
 
-4. **Run the gxp2json program:**
+4. **Run the gpx2json program:**
 
     ```bash
     python main.py --gpx your_gpx_file.gpx --json output_json_file.json
@@ -79,14 +79,14 @@ Choose your preferred method to explore the flat Earth with gxp2json:
 1. **Pull the Docker Image:**
 
     ```bash
-    docker pull anbiozz/gxp2json:latest
+    docker pull anbiozz/gpx2json:latest
     ```
 2. **Run the Docker Container:**
 
     ```bash
-    docker run -v $(pwd):/app anbiozz/gxp2json:latest --gpx /app/your_gpx_file.gpx --json /app/output_json_file.json
+    docker run -v $(pwd):/app anbiozz/gpx2json:latest --gpx /app/your_gpx_file.gpx --json /app/output_json_file.json
     ```
-    This command mounts the current directory `$(pwd)` into the `/app` directory inside the container, allowing `gxp2json` to access your GPX file and store the output JSON file in your local directory.
+    This command mounts the current directory `$(pwd)` into the `/app` directory inside the container, allowing `gpx2json` to access your GPX file and store the output JSON file in your local directory.
    
 ## Contribution
 
@@ -94,7 +94,7 @@ We welcome contributions from flat Earth enthusiasts and developers. If you're i
 
 ### Reporting Issues
 
-If you discover any quirks, cosmic hiccups, or potential improvements, please open an issue on our [GitHub repository](https://github.com/anbioZz/gxp2json/issues). Be sure to include detailed information about the issue and steps to reproduce it.
+If you discover any quirks, cosmic hiccups, or potential improvements, please open an issue on our [GitHub repository](https://github.com/anbioZz/gpx2json/issues). Be sure to include detailed information about the issue and steps to reproduce it.
 
 ## License
 
