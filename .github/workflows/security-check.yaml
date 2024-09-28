@@ -1,6 +1,9 @@
 name: Security check
 
-on: push
+on:
+  push:
+    branches:
+      - "**"
 
 env:
   FAKE_DOCKER_USERNAME: mydockerhubusername
