@@ -1,0 +1,26 @@
+name: Test
+
+on: push
+
+env:
+  FAKE_DOCKER_USERNAME: mydockerhubusername
+  FAKE_IMAGE_NAME: my-image-name
+  FAKE_IMAGE_TAG: current
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          tags: "${{ env.FAKE_DOCKER_USERNAME }}/${{ env.FAKE_IMAGE_NAME }}:${{ env.FAKE_IMAGE_TAG }}"
+
+      - name: Test::version
+        run: docker run --rm "${{ env.FAKE_DOCKER_USERNAME }}/${{ env.FAKE_IMAGE_NAME }}:${{ env.FAKE_IMAGE_TAG }}" --version
+
+      - name: Test::JSON and jq
+        run: cat test/test1.gpx | docker run --rm -i "${{ env.FAKE_DOCKER_USERNAME }}/${{ env.FAKE_IMAGE_NAME }}:${{ env.FAKE_IMAGE_TAG }}" --process | jq

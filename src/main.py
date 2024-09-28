@@ -51,9 +51,7 @@ def parse_gpx(gpx_file):
     :param gpx_file: File path or file-like object containing GPX data.
     :return: List of points extracted from the GPX file.
     """
-    # Open the GPX file and parse its contents
-    with open(gpx_file, "r") as file:
-        gpx = gpxpy.parse(file)
+    gpx = gpxpy.parse(gpx_file)
 
     points_list = list()
     points_index = 0
@@ -75,17 +73,15 @@ def parse_gpx(gpx_file):
 
     return points_list
 
-
-def gen_json(data_list, output_json_file):
+def gen_json(data_list):
     """
-    Writes the provided data list to a JSON file.
+    Converts the provided data list to a JSON-formatted string and prints it.
 
-    :param output_json_file: File path or file-like object for the output JSON file.
-    :param data_list: List of data to be written to the JSON file.
+    :param data_list: List of data to be converted to JSON format.
+    This function does not return a value but outputs the JSON string to standard output.
     """
-    with open(output_json_file, "w") as file:
-        json.dump(data_list, file)
-
+    json_output = json.dumps(data_list)
+    print(json_output)
 
 def set_zero_x_y(orig_list):
     """
@@ -116,21 +112,34 @@ if __name__ == '__main__':
         ██║   ██║██╔═══╝  ██╔██╗ ██╔═══╝ ██   ██║╚════██║██║   ██║██║╚██╗██║
         ╚██████╔╝██║     ██╔╝ ██╗███████╗╚█████╔╝███████║╚██████╔╝██║ ╚████║
          ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚══════╝ ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
-                                 Project LISAPED                            
+                                 Project LISAPED
+    """
+    usage = """
+    python main.py [--process] [--version]
+
+    This script accepts GPX data from stdin for processing.
     """
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        description=f'{logo}\nConverter from GPX to JSON'
+        description=f'{logo}\nConverter from GPX to JSON',
+        usage=usage
     )
-    parser.add_argument("--version", action="version", version="%(prog)s 0.0.3",
+    parser.add_argument("--version", action="version", version="%(prog)s 0.0.4",
                         help="show program version and exit")
-    parser.add_argument("--gpx", required=True, help="specify the path to the GPX file")
-    parser.add_argument("--json", required=True, help="specify the path to the JSON file")
-    # If the main script is called without arguments, display help.
-    if len(sys.argv) == 1:
-        parser.print_help(sys.stderr)
-        sys.exit(1)
+    parser.add_argument("--process", action="store_true", help="process GPX data from stdin")
+
     args = parser.parse_args()
 
-    print(logo)
-    gen_json(set_zero_x_y(parse_gpx(args.gpx)), args.json)
+    if args.process:
+        if sys.stdin.isatty():
+            print("No GPX data provided for processing. Please enter GPX data.\n")
+        else:
+            gpx_data = sys.stdin.read()
+            if gpx_data.strip():
+                gen_json(set_zero_x_y(parse_gpx(gpx_data)))
+                sys.exit(0)
+    else:
+        print("The --process flag is not set. Data processing will not be performed.\n")
+
+    parser.print_help(sys.stderr)
+    sys.exit(1)
