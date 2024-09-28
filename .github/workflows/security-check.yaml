@@ -1,13 +1,6 @@
 name: Security check
 
-on:
-  push:
-    branches:
-      - "**"
-      - "!main"
-  pull_request:
-    branches:
-      - main
+on: push
 
 env:
   FAKE_DOCKER_USERNAME: mydockerhubusername
