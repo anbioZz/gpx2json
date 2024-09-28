@@ -69,7 +69,15 @@ Choose your preferred method to explore the flat Earth with gpx2json:
 4. **Run the gpx2json program:**
 
     ```bash
-    python main.py --gpx your_gpx_file.gpx --json output_json_file.json
+    python main.py --process < in.gpx | jq
+    ```
+    or
+    ```bash
+    cat in.gpx | python main.py --process | jq
+    ```
+    or
+    ```bash
+    python main.py --process < in.gpx > out.json
     ```
 
     Replace `your_gpx_file.gpx` with the path to your GPX file and `output_json_file.json` with the desired output JSON file.
@@ -84,9 +92,17 @@ Choose your preferred method to explore the flat Earth with gpx2json:
 2. **Run the Docker Container:**
 
     ```bash
-    docker run -v $(pwd):/app anbiozz/gpx2json:latest --gpx /app/your_gpx_file.gpx --json /app/output_json_file.json
+    docker run -i anbiozz/gpx2json --process < file.gpx | jq
     ```
-    This command mounts the current directory `$(pwd)` into the `/app` directory inside the container, allowing `gpx2json` to access your GPX file and store the output JSON file in your local directory.
+    or
+    ```bash
+    cat in.gpx | docker run -i anbiozz/gpx2json --process | jq
+    ```
+    or
+    ```bash
+    docker run -i anbiozz/gpx2json --process < file.gpx > out.json
+    ```
+    
    
 ## Contribution
 
