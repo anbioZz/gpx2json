@@ -1,4 +1,8 @@
 # gpx2json
+[![Security check](https://github.com/anbioZz/gpx2json/actions/workflows/security-check.yaml/badge.svg)](https://github.com/anbioZz/gpx2json/actions/workflows/security-check.yaml)
+[![Test](https://github.com/anbioZz/gpx2json/actions/workflows/test.yaml/badge.svg)](https://github.com/anbioZz/gpx2json/actions/workflows/test.yaml)
+[![Build a Docker Image and Push it to Docker Hub](https://github.com/anbioZz/gpx2json/actions/workflows/build.yaml/badge.svg)](https://github.com/anbioZz/gpx2json/actions/workflows/build.yaml)
+
 Converter from GPX to JSON
 
           ██████╗ ██████╗ ██╗  ██╗██████╗      ██╗███████╗ ██████╗ ███╗   ██╗
