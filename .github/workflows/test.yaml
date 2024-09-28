@@ -23,4 +23,4 @@ jobs:
         run: docker run --rm "${{ env.FAKE_DOCKER_USERNAME }}/${{ env.FAKE_IMAGE_NAME }}:${{ env.FAKE_IMAGE_TAG }}" --version
 
       - name: Test::JSON and jq
-        run: cat test/test1.gpx | docker run --rm -i "${{ env.FAKE_DOCKER_USERNAME }}/${{ env.FAKE_IMAGE_NAME }}:${{ env.FAKE_IMAGE_TAG }} --process" | jq
+        run: cat test/test1.gpx | docker run --rm -i "${{ env.FAKE_DOCKER_USERNAME }}/${{ env.FAKE_IMAGE_NAME }}:${{ env.FAKE_IMAGE_TAG }}" --process | jq
